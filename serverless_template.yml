@@ -1,0 +1,20 @@
+service: fictionbase-endpoint
+provider:
+  name: aws
+  stage: dev
+  region: ap-northeast-1
+  cfLogs: true
+  runtime: go1.x
+custom:
+  apiGatewayServiceProxies:
+    - sqs:
+        path: /health
+        method: post
+        queueName: {"Fn::GetAtt":[ "SQSQueue", "QueueName" ]}
+        cors: true
+resources:
+  Resources:
+    SQSQueue:
+      Type: "AWS::SQS::Queue"
+plugins:
+  - serverless-apigateway-service-proxy
