@@ -1,5 +1,29 @@
 {
+  "name": "fictionbase-endpoint",
+  "version": "1.0.0",
+  "description": "endpoint for fictionbase",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fictionbase/endpoint.git"
+  },
+  "keywords": [
+    "serverless",
+    "fictionbase"
+  ],
+  "author": "seike460",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fictionbase/endpoint/issues"
+  },
+  "homepage": "https://github.com/fictionbase/endpoint#readme",
   "dependencies": {
-    "serverless": "^1.37.1"
+    "serverless": "^1.40.0"
+  },
+  "devDependencies": {
+    "serverless-apigateway-service-proxy": "^0.3.0"
   }
 }
